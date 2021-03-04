@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Super mercado</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="css/supermercado2.css">
+        <link rel="stylesheet" type="text/css" href="css/supermercado.css">
+
+    </head>
+    <body style="background-color:black;">
+
+        <header>
+            <div class="container">
+                <h1 class="titulo">Super mercado</h1>
+            </div>
+        </header>
+        <main>
+            <section class="container">
+                <h2 style="color: rgba(0, 4, 255, 0.993);">Minhas frutas:</h2>
+                <table>
+                    <thead>
+                        <h3 style="color: red;">Atenção!, para remover fruta clique duas vezes em cima da fruta que deseja remover!.</h3>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Valor</th>
+                            <th>Quantidade</th>
+                            <th>Total</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody class="tabela-frutas" id="tabela-frutas"style="color: rgb(0, 255, 0);"></tbody>> 
+        
+                   
+                       
+                    
+                    </tbody>
+                </table>
+                <table class="2">
+
+                    <tr style="color: rgb(0, 255, 0);"class="fruta" id="total" name="total" >
+                        <td></td>
+                        <td></td>
+                        <td class="quantidade">0</td>
+                        <td class="total">0</td>
+                     </tr>
+                    
+                </table>
+
+            </section>
+        </main>
+        <section class="container">
+            <h2 id="titulo-form" style="color: white;">Adicionar nova fruta</h2>
+            <ul style="color: rgb(255, 255, 255);"id="mensagens-erro" class="mensagens-erro">
+                
+            </ul>
+            <form id="form-adiciona">
+                <div class="grupo">
+                    <label for="Nome">Nome:</label>
+                    <input id="Nome" name="Nome" type="text" placeholder="Digite o nome da sua fruta:" class="campo campo-medio">
+                </div>
+                <div class="grupo">
+                    <label for="Valor">Valor:</label>
+                    <input id="Valor" name="Valor" type="text" placeholder="Digite o valor da fruta:" class="campo campo-medio">
+                </div>
+                <div class="grupo">
+                    <label for="Quantidade">Quantidade</label>
+                    <input id="Quantidade" name="Quantidade" type="text" placeholder="Digite a quantidade de frutas:" class="campo campo-medio">
+                </div>
+              
+        
+                <button id="adicionar-fruta" class="botao bto-principal">Adicionar fruta</button>
+            </form>
+        </section>
+        <script src="js/calcula-valor.js" ></script>
+        <script src="js/adicionar-fruta.js" ></script>
+        <script src="/js/remover-fruta.js"></script>
+    </body>
+</html>
