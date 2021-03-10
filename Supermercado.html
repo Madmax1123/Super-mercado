@@ -18,6 +18,7 @@
         <main>
             <section class="container">
                 <h2 style="color: rgba(0, 4, 255, 0.993);">Minhas frutas:</h2>
+                
                 <table>
                     <thead>
                         <h3 style="color: red;">Atenção!, para remover fruta clique duas vezes em cima da fruta que deseja remover!.</h3>
@@ -26,27 +27,33 @@
                             <th>Valor</th>
                             <th>Quantidade</th>
                             <th>Total</th>
-                            
                         </tr>
+                 
+                       
+                        
+                        
                     </thead>
                     <tbody class="tabela-frutas" id="tabela-frutas"style="color: rgb(0, 255, 0);"></tbody>> 
-        
                    
-                       
+                    <tr style="color: rgb(0, 255, 0);"class="fruta" >
+                        <td class="info-Nome">Cupuaçu</td>
+                        <td class="info-Valor">15</td>
+                        <td class="info-Quantidade">5</td>
+                        <td class="info-Total">0</td>
+                     </tr>
                     
                     </tbody>
+           
                 </table>
-                <table class="2">
-
-                    <tr style="color: rgb(0, 255, 0);"class="fruta" id="total" name="total" >
+                <table class="Total12" id="Total12" name="Total12">
+                     <tr style="color: rgb(0, 255, 0);"class="fruta" >
                         <td></td>
                         <td></td>
                         <td class="quantidade">0</td>
-                        <td class="total">0</td>
+                        <td id="total" name="total"class="total">0</td>
                      </tr>
-                    
                 </table>
-
+         
             </section>
         </main>
         <section class="container">
@@ -72,8 +79,13 @@
                 <button id="adicionar-fruta" class="botao bto-principal">Adicionar fruta</button>
             </form>
         </section>
-        <script src="js/calcula-valor.js" ></script>
         <script src="js/adicionar-fruta.js" ></script>
+        <script src="js/calcula-valor.js" ></script>
         <script src="/js/remover-fruta.js"></script>
+        <script src="/js/Total.js"></script>
+       
+
+  
+        
     </body>
 </html>

@@ -1,9 +1,13 @@
 var botaoAdicionar = document.querySelector("#adicionar-fruta");
+
+var total_pppp = []
+
 botaoAdicionar.addEventListener("click", function(){
     event.preventDefault();
     
     var form = document.querySelector("#form-adiciona")
     var Fruta = obtemFrutaDoFormulario(form)    
+
 
     var FrutaTr = montaTr(Fruta);
 
@@ -29,17 +33,20 @@ function exibeMensagensDeErro(erros){
     });
 }
 
-function obtemFrutaDoFormulario(form){
+function obtemFrutaDoFormulario(form){{
 
     var fruta = {
         Nome: form.Nome.value,
         Valor: form.Valor.value,
         Quantidade: form.Quantidade.value,
         Total: calculaTotal(form.Valor.value, form.Quantidade.value)
+      
     }
-   
-    return fruta;
+    return fruta
 }
+
+}
+
 
 function montaTr(fruta){
     var frutaTr = document.createElement("tr")
@@ -60,25 +67,4 @@ function montaTd(dado,classe){
     td.textContent = dado;
     td.classList.add(classe)
     return td;
-}
-
-
-function validaFruta(Fruta){
-    
-    var erros = [];
-    
-    if( Fruta.Nome.length == 0){
-        erros.push("O nome não pode estar em branco!");
-    }
-
-
-    
-    if( Fruta.Valor.length == 0){
-        erros.push("O valor não pode estar em branco!")
-    }
-    
-    if( Fruta.Quantidade.length == 0){
-        erros.push("A quantidade não pode estar em branco!")
-    }
-    return erros;
 }
