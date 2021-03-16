@@ -3,23 +3,17 @@ var totalFruta = document.querySelectorAll(".frutas");
 for(var i = 0; i < totalFruta.length ; i++){
     
     var Total = totalFrutas[i];
-
-    var tdquantidade = total.querySelector(".info-quantidade");
-    var quantidade = tdquantidade.textContent;
-
-    var tDTotal = total.querySelector(".total")
-    
        
     var total = calculaTotal(Valor,Quantidade);
-        tdTotal.textContent = total;
-    
- 
-    }
+    var t = calculaTotal2(Quantidade)
+    var v = calculaTotal3(Valor)
+}
 
   
     
 function calculaTotal(Valor,Quantidade){
-    var tdTotal = 0;
+    let tdTotal = 0;
+    
 
     tdTotal = (Valor * Quantidade) 
       
@@ -27,10 +21,19 @@ function calculaTotal(Valor,Quantidade){
 
 } 
 
-function Total(total, p){
-    var p = 0;
+function calculaTotal2(Quantidade){
+    let q = 0
 
-    p = (total + p)
+    q = parseInt(Quantidade)
 
-    return totall;
+    return q;
 }
+function calculaTotal3(Valor){
+    let v = 0
+
+    v = parseInt(Valor)
+
+    return v
+}
+
+

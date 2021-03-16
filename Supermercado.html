@@ -9,7 +9,6 @@
 
     </head>
     <body style="background-color:black;">
-
         <header>
             <div class="container">
                 <h1 class="titulo">Super mercado</h1>
@@ -22,44 +21,27 @@
                 <table>
                     <thead>
                         <h3 style="color: red;">Atenção!, para remover fruta clique duas vezes em cima da fruta que deseja remover!.</h3>
-                        <tr>
+                        <tr >
                             <th>Nome</th>
                             <th>Valor</th>
                             <th>Quantidade</th>
                             <th>Total</th>
-                        </tr>
-                 
-                       
-                        
-                        
+                        </tr> 
                     </thead>
-                    <tbody class="tabela-frutas" id="tabela-frutas"style="color: rgb(0, 255, 0);"></tbody>> 
-                   
-                    <tr style="color: rgb(0, 255, 0);"class="fruta" >
-                        <td class="info-Nome">Cupuaçu</td>
-                        <td class="info-Valor">15</td>
-                        <td class="info-Quantidade">5</td>
-                        <td class="info-Total">0</td>
-                     </tr>
-                    
-                    </tbody>
-           
-                </table>
-                <table class="Total12" id="Total12" name="Total12">
-                     <tr style="color: rgb(0, 255, 0);"class="fruta" >
-                        <td></td>
-                        <td></td>
-                        <td class="quantidade">0</td>
-                        <td id="total" name="total"class="total">0</td>
-                     </tr>
-                </table>
-         
+                        <tbody class="tabela-frutas" id="tabela-frutas"style="color: rgb(0, 255, 0);"></tbody>
+
+                        </tbody>
+                        <tr style="color: rgb(0, 255, 0);"class="fruta" >
+                            <td >Frutas adicionadas</td>
+                            <td class="valor">0</td>
+                            <td class="quantidade">0</td>
+                            <td class="total">0</td>
+                        </tr>
+                    </table>
+                <span id="erro-ajax" class="invisivel" style="background-color: red;">Erro ao buscar aos pacientes</span>
             </section>
         </main>
-        <section class="container">
-            <h2 id="titulo-form" style="color: white;">Adicionar nova fruta</h2>
-            <ul style="color: rgb(255, 255, 255);"id="mensagens-erro" class="mensagens-erro">
-                
+        <section class="container">      
             </ul>
             <form id="form-adiciona">
                 <div class="grupo">
@@ -79,13 +61,8 @@
                 <button id="adicionar-fruta" class="botao bto-principal">Adicionar fruta</button>
             </form>
         </section>
-        <script src="js/adicionar-fruta.js" ></script>
-        <script src="js/calcula-valor.js" ></script>
-        <script src="/js/remover-fruta.js"></script>
-        <script src="/js/Total.js"></script>
-       
-
-  
-        
+            <script src="js/adicionar-fruta.js" ></script>
+            <script src="/js/remover-fruta.js"></script>
+            <script src="/js/Total.js"></script>
     </body>
 </html>

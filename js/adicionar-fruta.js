@@ -1,6 +1,8 @@
 var botaoAdicionar = document.querySelector("#adicionar-fruta");
 
-var total_pppp = []
+var t = []
+var t2 = []
+var t3 = []
 
 botaoAdicionar.addEventListener("click", function(){
     event.preventDefault();
@@ -15,23 +17,13 @@ botaoAdicionar.addEventListener("click", function(){
     var tabela = document.querySelector("#tabela-frutas")
 
     tabela.appendChild(FrutaTr);
-    
-    form.reset();
-    var mensagensErro = document.querySelector("#mensagens-erro")
-    mensagensErro.innerHTML = "";
 
+    form.reset();
+    MostratrTotalMesmo()
+    MostratrQuantidade()
+    MostrartrValor()
 });
 
-function exibeMensagensDeErro(erros){
-
-    var ul = document.querySelector("#mensagens-erro");
-    ul.innerHTML = "";
-    erros.forEach(function(erro){
-        var li = document.createElement("li");
-        li.textContent = erro;
-        ul.appendChild(li)
-    });
-}
 
 function obtemFrutaDoFormulario(form){{
 
@@ -39,11 +31,17 @@ function obtemFrutaDoFormulario(form){{
         Nome: form.Nome.value,
         Valor: form.Valor.value,
         Quantidade: form.Quantidade.value,
-        Total: calculaTotal(form.Valor.value, form.Quantidade.value)
-      
+        Total: calculaTotal(form.Valor.value, form.Quantidade.value),
+        Total2: calculaTotal2(form.Quantidade.value),
+        Total3: calculaTotal3(form.Valor.value)
     }
-    return fruta
+    
 }
+
+t.push(calculaTotal(form.Valor.value, form.Quantidade.value))
+t2.push(calculaTotal2(form.Quantidade.value))
+t3.push(calculaTotal3(form.Valor.value))
+    return fruta;
 
 }
 
@@ -68,3 +66,19 @@ function montaTd(dado,classe){
     td.classList.add(classe)
     return td;
 }
+
+
+function MostratrTotalMesmo(){
+    let total = document.querySelector(".total")
+    console.log(t.reduce((a, b) => a + b))
+    total.textContent = t.reduce((a, b) => a + b)
+}
+function MostratrQuantidade(){
+    let quantidade = document.querySelector(".quantidade")
+    quantidade.textContent = t2.reduce((a, b) => a + b)
+}
+function MostrartrValor(){
+    let valor = document.querySelector(".valor")
+    valor.textContent = t3.reduce((a, b) => a + b)
+}
+
